@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jobs Overseas | Find Jobs Abroad</title>
+
+  <meta name="description"
+        content="Jobs Overseas helps job seekers discover international employment opportunities and connect with employers.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f7f9fc;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: #071b35;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: #f5b700;
+      color: #071b35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.92;
+    }
+
+    nav a:hover {
+      color: #f5b700;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .login-btn {
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 10px 17px;
+      border-radius: 7px;
+    }
+
+    .signup-btn {
+      background: #f5b700;
+      color: #071b35 !important;
+      padding: 10px 17px;
+      border-radius: 7px;
+      font-weight: 800 !important;
+    }
+
+    .menu {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(135deg, #071b35 0%, #0d315a 100%);
+      color: white;
+      padding: 90px 24px 110px;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #f5b700;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #dbe5f2;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      background: #f5b700;
+      color: #071b35;
+      padding: 14px 24px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .primary-btn:hover {
+      background: #ffd34d;
+    }
+
+    .secondary-btn {
+      border: 1px solid rgba(255,255,255,0.6);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .hero-card {
+      background: white;
+      color: #172033;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+
+    /* SEARCH */
+
+    .search-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+    }
+
+    .search-box input,
+    .search-box select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d8dee8;
+      border-radius: 8px;
+      outline: none;
+      background: white;
+    }
+
+    .search-box input:focus,
+    .search-box select:focus {
+      border-color: #f5b700;
+    }
+
+    .search-button {
+      border: none;
+      background: #071b35;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    /* GENERAL */
+
+    .section {
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #071b35;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #667085;
+    }
+
+    /* STATS */
+
+    .stats {
+      background: white;
+      margin-top: -35px;
+      position: relative;
+      border-radius: 14px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 30px;
+      color: #071b35;
+    }
+
+    .stat p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* JOBS */
+
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .job-card {
+      background: white;
+      padding: 24px;
+      border-radius: 13px;
+      border: 1px solid #e4e8ef;
+      transition: 0.2s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .job-country {
+      display: inline-block;
+      background: #eef4fb;
+      color: #0d315a;
+      padding: 5px 9px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .job-card h3 {
+      color: #071b35;
+      margin-bottom: 8px;
+    }
+
+    .job-card p {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .job-footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .salary {
+      font-weight: 800;
+      color: #071b35;
+    }
+
+    .view-job {
+      color: #0d5bd7;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* COUNTRIES */
+
+    .countries {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .country {
+      background: white;
+      border: 1px solid #e4e8ef;
+      border-radius: 12px;
+      padding: 25px 15px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .country:hover {
+      transform: translateY(-3px);
+      border-color: #f5b700;
+    }
+
+    .flag {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .country h3 {
+      font-size: 16px;
+      color: #071b35;
+    }
+
+    /* HOW IT WORKS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 28px;
+      border-radius: 13px;
+      text-align: center;
+      border: 1px solid #e4e8ef;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #f5b700;
+      color: #071b35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      color: #071b35;
+    }
+
+    .step p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #071b35;
+      color: white;
+      text-align: center;
+      border-radius: 18px;
+      padding: 60px 25px;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #dbe5f2;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #041224;
+      color: white;
+      padding: 60px 24px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #aebbd0;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 9px;
+    }
+
+    footer li a {
+      color: #aebbd0;
+      font-size: 14px;
+    }
+
+    footer li a:hover {
+      color: #f5b700;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      color: #8391a5;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: #071b35;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .nav-buttons {
+        display: none;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .jobs-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .countries {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .navbar {
+        padding: 15px 18px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .hero {
+        padding: 65px 18px 80px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .search-box {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .section {
+        padding: 60px 18px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .jobs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .countries {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .cta h2 {
+        font-size: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <div class="navbar">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">JO</div>
+        JOBS OVERSEAS
+      </a>
+
+      <nav id="navigation">
+        <a href="#jobs">Find Jobs</a>
+        <a href="#countries">Countries</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="#" class="login-btn">Login</a>
+        <a href="#" class="signup-btn">Sign Up</a>
+      </div>
+
+      <div class="menu" onclick="toggleMenu()">☰</div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div>
+
+        <h1>
+          Find Your Next
+          <span>Opportunity Abroad.</span>
+        </h1>
+
+        <p>
+          Discover international employment opportunities and take
+          the next step toward building your career beyond borders.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#jobs" class="primary-btn">Find Jobs</a>
+          <a href="#how" class="secondary-btn">How It Works</a>
+        </div>
+
+      </div>
+
+
+      <!-- SEARCH CARD -->
+
+      <div class="hero-card">
+
+        <h3>Search Jobs Abroad</h3>
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            id="keyword"
+            placeholder="Job title or keyword"
+          >
+
+          <select id="country">
+            <option value="">Select country</option>
+            <option>United Kingdom</option>
+            <option>Germany</option>
+            <option>Canada</option>
+            <option>Australia</option>
+            <option>Ireland</option>
+            <option>United States</option>
+          </select>
+
+          <button
+            class="search-button"
+            onclick="searchJobs()">
+            Search
+          </button>
+
+        </div>
+
+        <p id="searchMessage"
+           style="margin-top:15px;color:#667085;font-size:13px;">
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STATS -->
+
+  <div class="container">
+
+    <div class="stats">
+
+      <div class="stat">
+        <h3>6+</h3>
+        <p>Countries</p>
+      </div>
+
+      <div class="stat">
+        <h3>100+</h3>
+        <p>Opportunities</p>
+      </div>
+
+      <div class="stat">
+        <h3>24/7</h3>
+        <p>Access</p>
+      </div>
+
+      <div class="stat">
+        <h3>Global</h3>
+        <p>Opportunities</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- JOBS -->
+
+  <section class="section" id="jobs">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Featured Opportunities</h2>
+
+        <p>
+          Explore employment opportunities from around the world.
+        </p>
+
+      </div>
+
+
+      <div class="jobs-grid">
+
+        <div class="job-card">
+
+          <span class="job-country">🇬🇧 United Kingdom</span>
+
+          <h3>Care Assistant</h3>
+
+          <p>Healthcare & Social Care</p>
+
+          <p>📍 United Kingdom</p>
+
+          <div class="job-footer">
+            <span class="salary">£25k+ / year</span>
+            <a href="#" class="view-job">View Job →</a>
+          </div>
+
+        </div>
+
+
+        <div class="job-card">
+
+          <span class="job-country">🇩🇪 Germany</span>
+
+          <h3>Warehouse Operative</h3>
+
+          <p>Logistics & Supply Chain</p>
+
+          <p>📍 Germany</p>
+
+          <div class="job-footer">
+            <span class="salary">€2,500+ / month</span>
+            <a href="#" class="view-job">View Job →</a>
+          </div>
+
+        </div>
+
+
+        <div class="job-card">
+
+          <span class="job-country">🇨🇦 Canada</span>
+
+          <h3>General Labourer</h3>
+
+          <p>Construction & Labour</p>
+
+          <p>📍 Canada</p>
+
+          <div class="job-footer">
+            <span class="salary">CAD 3,000+</span>
+            <a href="#" class="view-job">View Job →</a>
+          </div>
+
+        </div>
+
+
+        <div class="job-card">
+
+          <span class="job-country">🇦🇺 Australia</span>
+
+          <h3>Hospitality Worker</h3>
+
+          <p>Hospitality & Tourism</p>
+
+          <p>📍 Australia</p>
+
+          <div class="job-footer">
+            <span class="salary">AUD 4,000+</span>
+            <a href="#" class="view-job">View Job →</a>
+          </div>
+
+        </div>
+
+
+        <div class="job-card">
+
+          <span class="job-country">🇮🇪 Ireland</span>
+
+          <h3>Healthcare Worker</h3>
+
+          <p>Healthcare</p>
+
+          <p>📍 Ireland</p>
+
+          <div class="job-footer">
+            <span class="salary">€2,800+</span>
+            <a href="#" class="view-job">View Job →</a>
+          </div>
+
+        </div>
+
+
+        <div class="job-card">
+
+          <span class="job-country">🇺🇸 United States</span>
+
+          <h3>Hospitality Assistant</h3>
+
+          <p>Hospitality</p>
+
+          <p>📍 United States</p>
+
+          <div class="job-footer">
+            <span class="salary">$3,000+</span>
+            <a href="#" class="view-job">View Job →</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COUNTRIES -->
+
+  <section class="section" id="countries">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Popular Destinations</h2>
+
+        <p>
+          Explore opportunities across major international job markets.
+        </p>
+
+      </div>
+
+
+      <div class="countries">
+
+        <div class="country">
+          <div class="flag">🇬🇧</div>
+          <h3>United Kingdom</h3>
+        </div>
+
+        <div class="country">
+          <div class="flag">🇩🇪</div>
+          <h3>Germany</h3>
+        </div>
+
+        <div class="country">
+          <div class="flag">🇨🇦</div>
+          <h3>Canada</h3>
+        </div>
+
+        <div class="country">
+          <div class="flag">🇦🇺</div>
+          <h3>Australia</h3>
+        </div>
+
+        <div class="country">
+          <div class="flag">🇮🇪</div>
+          <h3>Ireland</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section class="section" id="how">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>How Jobs Overseas Works</h2>
+
+        <p>
+          A simple way to discover and manage international job opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <h3>Create Your Profile</h3>
+
+          <p>
+            Register and create your job seeker profile.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <h3>Find Opportunities</h3>
+
+          <p>
+            Search available international employment opportunities.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <h3>Apply</h3>
+
+          <p>
+            Review the requirements and submit your application.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">4</div>
+
+          <h3>Track Applications</h3>
+
+          <p>
+            Keep track of your applications and opportunities.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>About Jobs Overseas</h2>
+
+        <p>
+          Connecting ambitious job seekers with international opportunities.
+        </p>
+
+      </div>
+
+      <div style="
+        max-width:800px;
+        margin:auto;
+        background:white;
+        padding:35px;
+        border-radius:14px;
+        border:1px solid #e4e8ef;
+        text-align:center;
+      ">
+
+        <p>
+          Jobs Overseas is designed to make international employment
+          opportunities easier to discover, understand and manage.
+          Our goal is to provide job seekers with useful information
+          and a simple platform for exploring opportunities abroad.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Important:</strong>
+          Finding or applying for a job through this platform does not
+          guarantee employment, a work permit, visa approval or immigration
+          approval.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="cta">
+
+        <h2>Ready to Explore Opportunities?</h2>
+
+        <p>
+          Create your profile and start exploring international
+          employment opportunities.
+        </p>
+
+        <a href="#" class="primary-btn">
+          Create Your Profile
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer id="contact">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>JOBS OVERSEAS</h3>
+
+        <p>
+          Helping job seekers discover international employment
+          opportunities.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Platform</h3>
+
+        <ul>
+          <li><a href="#jobs">Find Jobs</a></li>
+          <li><a href="#countries">Countries</a></li>
+          <li><a href="#how">How It Works</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Company</h3>
+
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <ul>
+          <li><a href="mailto:info@jobsoverseas.org">
+            info@jobsoverseas.org
+          </a></li>
+
+          <li><a href="#">Contact Us</a></li>
+        </ul
