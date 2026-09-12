@@ -1,0 +1,13 @@
+{
+  "name": "jobs-overseas",
+  "version": "1.0.0",
+  "description": "Jobs Overseas platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
+  }
+}
